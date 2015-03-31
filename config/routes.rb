@@ -1,7 +1,14 @@
-Puppywear.com::Application.routes.draw do
+Rails.application.routes.draw do
   
- get 'products', to: 'products#index', as:'products'
+ get    'products',         to: 'products#index',   as:'products'
+ get    'products/new',     to: 'products#new',     as: 'new_product'
+ get    'products/:id',     to: 'products#show',    as: 'product'
+ post   'product',          to: 'products#create'
+ get    'product/:id/edit', to: 'product#edit',     as: 'edit_product'
+ patch  'products/:id',     to: 'product#update'
+ delete 'products/:id',     to: 'products#destroy', as: 'delete_product'
 
+root 'products#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
