@@ -5,8 +5,8 @@
  
   <div><%= product.description %></div>
   
-  <% if product.image_filename.present? %>
-    <p><%= image_tag product.image_filename, width: 200 %></p>
+  <% if product.image.present? %>
+    <p><%= image_tag product.image.medium.url %></p>
   <% end %>
   
 </div>
