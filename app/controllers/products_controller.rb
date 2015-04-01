@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    @products = Product.order(:title)
   end
 
   def show
@@ -8,11 +8,11 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product = Product.new(product_params)
+    @product = Product.new
   end
 
   def create
-    @product = Product.new(params[:product])
+    @product = Product.new(product_params)
     if @product.save
       redirect_to action: :index
     else
@@ -25,7 +25,7 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @product = product.find(params[:id])
+    @product = Product.find(params[:id])
     if @product.update_attributes(product_params)
       redirect_to @product
     else
@@ -39,9 +39,9 @@ class ProductsController < ApplicationController
     redirect_to root_path
   end
   
-  private
+private
   def product_params
     params.require(:product).permit(:title, :description, :price, :stock_quantity)              
   end
-  end
+end
 
