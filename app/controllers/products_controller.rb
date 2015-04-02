@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @categories = Category.order(:title)
   end
 
   def create
@@ -22,6 +23,7 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+    @categories = Category.order(:title)
   end
 
   def update
@@ -39,9 +41,13 @@ class ProductsController < ApplicationController
     redirect_to root_path
   end
   
+  def category
+    
+  end
+  
 private
   def product_params
-    params.require(:product).permit(:title, :description, :price, :image_filename, :stock_quantity)              
+    params.require(:product).permit(:title, :description, :price, :image, :stock_quantity, :category_id)              
   end
 end
 
