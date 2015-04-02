@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
-    @categories = Category.order(:title)
+    @categories = Category.all
   end
 
   def create
@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
-    @categories = Category.order(:title)
+    @categories = Category.all
   end
 
   def update
@@ -39,10 +39,6 @@ class ProductsController < ApplicationController
    @product = Product.find(params[:id])
    @product.destroy
     redirect_to root_path
-  end
-  
-  def category
-    
   end
   
 private
