@@ -8,6 +8,6 @@
   <% if product.image.present? %>
     <p><%= image_tag product.image.medium.url %></p>
   <% end %>
-  
-    
-</div>
+ </div>
+<% if product.category %>
+<p><strong>Category:</strong> <%= product.category.title %></p>
