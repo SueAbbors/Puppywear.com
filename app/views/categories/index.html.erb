@@ -1,6 +1,6 @@
 <h1>List of Categories</h1>
 <% @categories.each do |category| %>
-  <p><% category.name %></p> 
- 
+  <h2><%= category.name %></h2>
+  <%= render category.products %>
+<% end %> 
 
-<%= link_to 'New Category', new_category_path %>

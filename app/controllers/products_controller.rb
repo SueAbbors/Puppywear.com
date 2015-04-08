@@ -42,6 +42,16 @@ class ProductsController < ApplicationController
     redirect_to root_path
   end
   
+  def search
+    
+  end
+  
+  def search_results
+    wildcard_keywords = '%' + params[:search_keywords] + '%'
+    @products = Product.where("title LIKE ?", wildcard_keywords)
+        
+  end
+  
 private
   def product_params
     params.require(:product).permit(:title, :description, :price, :image, :stock_quantity, :category_id)              

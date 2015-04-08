@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
  root 'products#index'
+ get 'categories', to: 'categories#index', as: 'categories'
   
  #get    'products',           to: 'products#index',            as:  'products'
  #get    'products/new',       to: 'products#new',              as:  'new_product'
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
  #get    'products/:id/edit',  to: 'products#edit',             as:  'edit_product'
  #patch  'products/:id',       to: 'products#update'
  #delete 'products/:id',       to: 'products#destroy',          as:  'delete_product'
- root to: 'categories#index'
+ #get   'products:id/categories',  to: 'products#category'       as: 'categories'
  get      'search_results',    to: 'products#search_results',   as: 'search_results'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
