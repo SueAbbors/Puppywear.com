@@ -1,5 +1,6 @@
 <header>
-    <h1><%= link_to 'puppywear.com' %>My Logo here</h1>
+    <div id="header">
+    <h1><%= image_tag 'puppywear.jpg' %></h1>
     <nav>
       <ul>
         <li><%= link_to "Home", root_path %></li>
@@ -11,4 +12,5 @@
         <%= text_field_tag :search_keywords %>
         <%= submit_tag 'Search' %>
     <% end %>
+    </div>
 </header>

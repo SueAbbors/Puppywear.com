@@ -1,9 +1,10 @@
 class PagesController < ApplicationController
   def about
-    @pages = Page.about
+    @pages = Page.all
   end
 
   def contact
-    @pages = Page.contact
+    @pages = Page.all
+    
   end
 end

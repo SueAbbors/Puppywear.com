@@ -1,5 +1,7 @@
 <h1>Contact Puppywear.com</h1>
 
-  <%= render pages.contact %>
+  <% @pages.each do |contact| %>
+    Contact us: <%= contact.content %>
+  <% end %>
 
 

@@ -1,3 +1,5 @@
 <h1>About Puppywear.com</h1>
  
-  <%= render page.about %>
+  <% @pages.each do |about| %>
+    About us: <%= about.content %>
+  <% end %>
