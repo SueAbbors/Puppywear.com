@@ -54,6 +54,16 @@ class ProductsController < ApplicationController
     end
     @categories = Category.all
   end
+  def recent
+    @products = Product.where('created_at > :date', date: 1.week.ago)
+    @categories = Category.all
+  end
+  
+  def on_sale
+   @products = Product.where("CAST(price AS STRING) LIKE '%99'")
+    @categories = Category.all 
+  
+  end
   
 private
   def product_params

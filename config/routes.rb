@@ -19,6 +19,8 @@ Rails.application.routes.draw do
  #delete 'products/:id',       to: 'products#destroy',          as:  'delete_product'
  #get   'products:id/categories',  to: 'products#category'       as: 'categories'
  post    'search_results',      to: 'products#search_results',   as: 'search_results'
+ get     'recent',              to: 'products#recent',            as:'recent'
+ get     'on_sale',              to: 'products#on_sale',            as:'on_sale'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
