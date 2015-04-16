@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  
-  
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'products#index'
+  resources :category_search
   
   get 'categories', to: 'categories#index', as: 'categories'
  
@@ -13,7 +12,7 @@ Rails.application.routes.draw do
   get 'pages/contact' 
  #get    'products',           to: 'products#index',            as:  'products'
  #get    'products/new',       to: 'products#new',              as:  'new_product'
- get     'products/:id',       to: 'products#show',             as:  'product'
+ #get     'products/:id',       to: 'products#show',             as:  'product'
  #post   'products',           to: 'products#create'
  #get    'products/:id/edit',  to: 'products#edit',             as:  'edit_product'
  #patch  'products/:id',       to: 'products#update'

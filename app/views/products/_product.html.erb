@@ -1,5 +1,5 @@
 <div class="product">
-  <h3><%= link_to product.title, product %></h3>
+  <h3><%= link_to product.title, "product" %></h3>
   
  <p><strong>Price:</strong> <%= number_to_currency product.price %></p> 
  
@@ -8,6 +8,8 @@
   <% if product.image.present? %>
     <p><%= image_tag product.image.medium.url %></p>
   <% end %>
+  
+  <p><%= link_to "Category Search", new_category_search_path %></p>
  </div>
   <% if product.category %>
     <p><strong>Category:</strong> <%= product.category.name %></p>
