@@ -18,7 +18,7 @@ Rails.application.routes.draw do
  #patch  'products/:id',       to: 'products#update'
  #delete 'products/:id',       to: 'products#destroy',          as:  'delete_product'
  #get   'products:id/categories',  to: 'products#category'       as: 'categories'
- get    'search_results',      to: 'products#search_results',   as: 'search_results'
+ post    'search_results',      to: 'products#search_results',   as: 'search_results'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

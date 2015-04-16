@@ -48,10 +48,11 @@ class ProductsController < ApplicationController
   
   def search_results
     if params[:category_id].to_i == 0
-      @products = Product.where()
+      @products = Product.where("title LIKE '%#{params[:search_keywords]}%'")
+    else
+     @products = Product.where("title LIKE '%#{params[:search_keywords]}%' and category_id = #{params[:category_id]}")
     end
-    
-        
+    @categories = Category.all
   end
   
 private
