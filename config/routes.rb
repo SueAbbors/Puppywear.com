@@ -21,6 +21,7 @@ Rails.application.routes.draw do
  post    'search_results',      to: 'products#search_results',   as: 'search_results'
  get     'recent',              to: 'products#recent',            as:'recent'
  get     'on_sale',              to: 'products#on_sale',            as:'on_sale'
+ get     'customer',              to: 'customers#index',   as:'customer'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
