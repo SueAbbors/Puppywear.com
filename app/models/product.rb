@@ -7,4 +7,7 @@ class Product < ActiveRecord::Base
   validates :stock_quantity, numericality: {only_integer: true}
   
   mount_uploader :image, ProductImageUploader
+  
+  #paginates_per 2
+  
 end
