@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   
   get 'categories', to: 'categories#index', as: 'categories'
  
-  get 'pages/about' 
+  get 'pages/about',  to: 'pages#about', as: 'pages_about'
 
-  get 'pages/contact' 
+  get 'pages/contact', to: 'pages#contact',  as: 'pages_contact'
  #get    'products',           to: 'products#index',            as:  'products'
  #get    'products/new',       to: 'products#new',              as:  'new_product'
  #get     'products/:id',       to: 'products#show',             as:  'product'
