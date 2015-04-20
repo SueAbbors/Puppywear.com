@@ -14,3 +14,5 @@
   <% if product.category %>
     <p><strong>Category:</strong> <%= product.category.name %></p>
   <% end %>
+  
+  <%= link_to 'add_cart', add_item_to_cart_path(:id => product.id) %>

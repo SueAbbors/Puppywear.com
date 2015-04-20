@@ -1,6 +1,7 @@
-ActiveAdmin.register Order do
+ActiveAdmin.register LineItem do
   
-    permit_params :gst, :hst, :pst, :status, :customer_id, :line_item_id
+  permit_params :quantity, :price, :order_id, :product_id
+
 
 
   # See permitted parameters documentation:

@@ -2,6 +2,9 @@
   <p><%= paginate @products %> </p> 
 <p>Products table size: <%= @products.size %></p>
 
+<%= render partial: 'products/cart' %>
 
 <%= render @products %>
+
+
 

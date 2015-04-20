@@ -1,0 +1,10 @@
+<h2>Items in Cart</h2>
+<% @cart_items.each do |item| %>
+<ul>
+  <li><%= item.title %></li>
+  <li><%= number_to_currency item.price %></li>
+</ul>
+  
+<% end %>
+
+<%= link_to 'Check Out', 'products/checkout' %>

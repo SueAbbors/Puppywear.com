@@ -22,6 +22,9 @@ Rails.application.routes.draw do
  get     'recent',              to: 'products#recent',            as:'recent'
  get     'on_sale',              to: 'products#on_sale',            as:'on_sale'
  get     'customer',              to: 'customers#index',   as:'customer'
+ match    '/products/add/:id',    to: 'products#add_item_to_cart',  as: 'add_item_to_cart', id: /\d+/, :via => :get
+ get    '/products/checkout',     to: 'products#checkout',   as: 'checkout'
+ match  '/products/create.html.erb',  to: 'products#create',  as: 'create', :via => :post
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
