@@ -8,6 +8,5 @@ class Product < ActiveRecord::Base
   
   mount_uploader :image, ProductImageUploader
   
-  #paginates_per 2
-  
+ 
 end

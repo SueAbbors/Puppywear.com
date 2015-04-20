@@ -8,7 +8,7 @@ class CustomersController < ApplicationController
     
   end
 
-  def customer_full_name
+  def full_name
     return "#{first_name} #{last_name}"
   end
 end
