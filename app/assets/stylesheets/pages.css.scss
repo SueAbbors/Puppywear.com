@@ -2,11 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$font-stack:    Helvetica, sans-serif;
+$cyan: #0066FF;
+
+@for $index from 1 through 6 {
+  h#{$index}{
+    font: 32px/42px trajan-pro-1,trajan-pro-2;
+    color: $cyan;
+  }
+}
 nav {
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    font: 100% $font-stack;
+    color: $cyan;
   }
 
   li { display: inline-block; }
@@ -16,4 +27,10 @@ nav {
     padding: 6px 12px;
     text-decoration: none;
   }
+  
+  h3 {
+    font: 100% $font-stack;
+    color: $cyan;
+  }
+  
 }

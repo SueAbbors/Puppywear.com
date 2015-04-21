@@ -16,8 +16,9 @@
         <select name='category_id'>
             <option value= '0'>all</option>
             <%= options_from_collection_for_select(all_categories, 'id', 'name') %>
-            <%= submit_tag 'Search' %>
         </select>
+            <%= submit_tag 'Search' %>
+        
     <% end %>
     
     </div>

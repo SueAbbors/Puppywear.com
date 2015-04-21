@@ -48,19 +48,19 @@ ActiveAdmin.register_page "Dashboard" do
               number_to_currency(order.line_items.sum(:price))
             end
             td do
-              if order.hst > 0
+              if !order.hst.nil?
                 number_to_currency(order.line_items.sum(:price) + order.line_items.sum(:price) * order.hst)
               else
                 number_to_currency(order.line_items.sum(:price) +
                                        order.line_items.sum(:price) * order.gst +
-                                       order.line_items.sum(:price) + order.pst)
+                                       order.line_items.sum(:price) * order.pst)
               end
             end
           end
           tr do
             order.line_items.each do |item|
               td do
-                item.product.name + ' ' + number_to_currency(item.price)
+                item.product.title + ' ' + number_to_currency(item.price)
               end
             end
           end
@@ -68,4 +68,4 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
   end # content
-  end
+end

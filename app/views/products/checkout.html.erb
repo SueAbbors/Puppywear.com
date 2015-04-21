@@ -5,7 +5,7 @@
   <% @cart_items.each do |item| %>
   <ul>
     <% if item.image.present? %>
-    <li></li><%= image_tag item.image.medium.url %></li>
+    <li><%= image_tag item.image.thumb.url %></li>
     <% end %>
   <li><%= item.title %></li>
  <li><%= item.description %></li> 

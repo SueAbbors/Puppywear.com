@@ -1,5 +1,6 @@
 <h1>All Clothing Options</h1>
-  <p><%= paginate @products %> </p> 
+
+<%= paginate @products %>  
 <p>Products table size: <%= @products.size %></p>
 
 <%= render partial: 'products/cart' %>

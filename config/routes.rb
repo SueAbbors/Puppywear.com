@@ -8,11 +8,11 @@ Rails.application.routes.draw do
   get 'categories', to: 'categories#index', as: 'categories'
  
   get 'pages/about',  to: 'pages#about', as: 'pages_about'
-
+get    '/products/checkout',     to: 'products#checkout',   as: 'checkout'
   get 'pages/contact', to: 'pages#contact',  as: 'pages_contact'
  #get    'products',           to: 'products#index',            as:  'products'
  #get    'products/new',       to: 'products#new',              as:  'new_product'
- #get     'products/:id',       to: 'products#show',             as:  'product'
+ get     'products/:id',       to: 'products#show',             as:  'product'
  #post   'products',           to: 'products#create'
  #get    'products/:id/edit',  to: 'products#edit',             as:  'edit_product'
  #patch  'products/:id',       to: 'products#update'
@@ -23,7 +23,7 @@ Rails.application.routes.draw do
  get     'on_sale',              to: 'products#on_sale',            as:'on_sale'
  get     'customer',              to: 'customers#index',   as:'customer'
  match    '/products/add/:id',    to: 'products#add_item_to_cart',  as: 'add_item_to_cart', id: /\d+/, :via => :get
- get    '/products/checkout',     to: 'products#checkout',   as: 'checkout'
+ 
  match  '/products/create.html.erb',  to: 'products#create',  as: 'create', :via => :post
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

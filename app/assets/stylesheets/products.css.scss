@@ -1,6 +1,8 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$font-stack:    Times New Roman, sans-serif;
+$scorpion: #595959;
 
 #container {
     
@@ -21,8 +23,12 @@ nav {
   li { display: inline-block; }
 
   a {
-    display: block;
+    display: inline-block;
     padding: 6px 12px;
     text-decoration: none;
+  }
+  h1 {
+    font: 100% $font-stack;
+    color: $scorpion;
   }
 }
